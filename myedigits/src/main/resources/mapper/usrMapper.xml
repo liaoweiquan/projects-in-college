@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace 用于定义一个映射配置文件的根节点-->
+<!--命名空间默认情况下使用当前操作实体类的全路径-->
+<mapper namespace="com.my.edigits.entity.Usr">
+    <!--<select id="usersList" resultType="com.demo.entity.Users">-->
+    <!--select * from users-->
+    <!--</select>-->
+    <select id="findUsr" resultType="com.my.edigits.entity.Usr">
+        select * from usrscore where username = #{username}
+    </select>
+    <select id="findUsrs" resultType="com.my.edigits.entity.Usr">
+        select * from usrscore
+    </select>
+
+    <insert id="addUsr" useGeneratedKeys="true" keyProperty="nickname">
+        insert into usrscore values (#{username},#{nickname},#{str},#{hstep},#{cstep},#{ccnt},#{score},#{date})
+    </insert>
+    <update id="changeUsr">
+        update usrscore
+        <set>
+            <if test="nickname != null">nickname = #{nickname},</if>
+            <if test="str != null">str = #{str},</if>
+            <if test="hstep != null">hstep = #{hstep},</if>
+            <if test="cstep != null">cstep = #{cstep},</if>
+            <if test="ccnt != null">ccnt = #{ccnt},</if>
+            <if test="score != null">score = #{score},</if>
+            <if test="date != null">date = #{date},</if>
+        </set>
+        where username = #{username}
+    </update>
+</mapper>
