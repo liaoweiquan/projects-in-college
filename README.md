@@ -3,5 +3,7 @@
 
 [《数据结构课程设计》：迷你记事本](https://github.com/yangyangu/projects-in-college/tree/master/MiniWord)
 
-[《机器智能》基于BP神经网络的手写数字识别](https://github.com/yangyangu/projects-in-college/tree/master/BP_Flask)
+[《机器智能》：基于BP神经网络的手写数字识别](https://github.com/yangyangu/projects-in-college/tree/master/BP_Flask)
+
+[《机器智能》：A*算法解决八数码问题](https://github.com/yangyangu/projects-in-college/tree/master/myedigits)
 
