@@ -1,3 +1,5 @@
+课程：《机器智能》
+
 # myedigits
 JSP+JavaScript+MyBatis搭建的八数码游戏解题网站
 ## 八数码问题是经典的九宫格重排问题
